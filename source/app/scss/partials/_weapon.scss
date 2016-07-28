@@ -1,0 +1,12 @@
+.weapon {
+  background-color: white;
+  border-radius: 5%;
+  color: black;
+  cursor: pointer;
+  display: block;
+  padding: 25px 0;
+  &:hover { 
+    background-color: black;
+    color: white;
+  }
+}

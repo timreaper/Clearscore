@@ -1,0 +1,14 @@
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.text-center {
+  text-align: center;
+}

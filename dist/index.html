@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Rock, Paper, Scissors</title>
+
+    <link rel="stylesheet" href="libraries/css/libraries.css">
+    <link rel="stylesheet" href="app/css/app.css">
+
+    <script type="text/javascript" src="libraries/js/libraries.js"></script>
+    <script src="https://use.fontawesome.com/05c6485f76.js"></script>
+</head>
+
+<body ng-app="RockPaperScissors">
+<div class="main text-center" ng-controller="MainController">
+    <div class="container flex-center full-height">
+        <div class="reset row">
+            <button class="btn" onclick="game.reset();">Reset</button>
+        </div>
+        <div class="scoreboard row">
+            <div class="scoreboard__user six columns" title="This is your score.">
+                <h2>You:</h2>
+                <h3 class="scoreboard__user--score">0</h3>
+            </div>
+            <div class="scoreboard__computer six columns" title="This is the opponent's score.">
+                <h2>PC:</h2>
+                <h3 class="scoreboard__computer--score">0</h3>
+            </div>
+        </div>
+        <div class="game row">
+            <div class="four columns" ng-repeat="weapon in weapons">
+                <weapon-info title="{{ weapon.description }}" id="{{ weapon.id }}" class="weapon" info="weapon"
+                             ng-click="fight(weapon);"></weapon-info>
+            </div>
+        </div>
+        <h4 class="status">Welcome to Rock, Paper, Scissors. Choose your next move wisely.</h4>
+    </div>
+</div>
+<script>
+
+</script>
+<script type="text/javascript" src="app/js/app.js"></script>
+</body>
+</html>
