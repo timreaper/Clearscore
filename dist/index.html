@@ -8,25 +8,33 @@
 
     <link rel="stylesheet" href="libraries/css/libraries.css">
     <link rel="stylesheet" href="app/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="libraries/js/libraries.js"></script>
     <script src="https://use.fontawesome.com/05c6485f76.js"></script>
 </head>
 
 <body ng-app="RockPaperScissors">
+<img src="assets/background/woodford.png" class="background" title="This is a photo (heavily blurred) I took in Woodford near the North Circular for A Level Photography. Used to love taking long exposure photos like this at night time, you get quite trippy lighting effects that way.">
 <div class="main text-center" ng-controller="MainController">
     <div class="container flex-center full-height">
         <div class="reset row">
-            <button class="btn" onclick="game.reset();">Reset</button>
+            <button class="btn" title="Would you like to reset the game?" onclick="game.reset();"><i class="fa fa-repeat"></i> Reset</button>
         </div>
         <div class="scoreboard row">
             <div class="scoreboard__user six columns" title="This is your score.">
                 <h2>You:</h2>
-                <h3 class="scoreboard__user--score">0</h3>
+                <h2 class="scoreboard__user__score">0</h2>
+                <p title="This is what you last picked.">
+                    Last Selected: <span class="scoreboard__user__picked"></span>
+                </p>
             </div>
             <div class="scoreboard__computer six columns" title="This is the opponent's score.">
                 <h2>PC:</h2>
-                <h3 class="scoreboard__computer--score">0</h3>
+                <h2 class="scoreboard__computer__score">0</h2>
+                <p title="This is what the computer last picked.">
+                    Last Selected: <span class="scoreboard__computer__picked"></span>
+                </p>
             </div>
         </div>
         <div class="game row">
