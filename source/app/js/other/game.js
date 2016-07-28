@@ -18,8 +18,8 @@ var game = new function () {
 
     this.fight = function (weapon, weapons) {
         var computer_weapon = this.pick_computer_weapon(weapons);
-        document.getElementsByClassName('scoreboard__user__picked')[0].innerHTML = weapon.name;
-        document.getElementsByClassName('scoreboard__computer__picked')[0].innerHTML = computer_weapon.name;
+        document.getElementsByClassName('scoreboard__user__picked')[0].innerHTML = '<i class="fa ' + weapon.icon + '"></i>';
+        document.getElementsByClassName('scoreboard__computer__picked')[0].innerHTML = '<i class="fa ' + computer_weapon.icon + '"></i>';
 
         if (weapon.id === computer_weapon.id) {
             console.log('draw');
