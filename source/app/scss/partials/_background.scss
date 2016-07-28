@@ -1,5 +1,5 @@
 .background {
-  filter: blur(50px);
+  @include filter(blur, 50px);
   height: 100vh;
   left: 0;
   position: absolute;
